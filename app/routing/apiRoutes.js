@@ -1,3 +1,5 @@
+ var path = require("path");
+ 
  var friendsList = require("../data/friends.js");
 
  module.exports = function(app){
@@ -10,15 +12,15 @@
 
 
 
-    //  app.post("/api/friends", function(req, res) {
+     app.post("/api/friends", function(req, res) {
         
-    //     if (tableData.length < 5) {
-    //       tableData.push(req.body);
-    //       res.json(true);
-    //     }
-    //     else {
-    //       waitListData.push(req.body);
-    //       res.json(false);
-    //     }
-    //   });
+        if (friendsList.length < 5) {
+          friendsList.push(req.body);
+          res.json(true);
+          console.log(friendsList);
+        }else{
+            res.json(false);
+        }
+        
+      });
  }

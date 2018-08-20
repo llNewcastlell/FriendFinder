@@ -2,7 +2,7 @@
 
 var friends = [{
         name: "Steve",
-        photo: "",
+        photo: "https://assets.rbl.ms/14253759/980x.jpg",
         scores: [
             2,
             2,
